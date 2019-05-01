@@ -1,14 +1,13 @@
-import { createServer } from "http";
+import express from "express";
 
 const hostname = "127.0.0.1";
-const port = 3000;
+const port = process.env.PORT || 4200;
+const app = express();
 
-const server = createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader("Content-Type", "text/plain");
-  res.end("Hello World\n");
+app.get("/", (req, res) => {
+  res.send({ hello: "world" });
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
-});
+app.listen(port, hostname, () =>
+  console.log(`Server's up at http://${hostname}:${port}/`)
+);
