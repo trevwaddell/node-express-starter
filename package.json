@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "devDependencies": {
+    "dotenv": "^7.0.0",
+    "nodemon": "^1.19.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/register": "^7.4.4"
+  }
+}
